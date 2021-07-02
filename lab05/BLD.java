@@ -4,7 +4,7 @@ import java.awt.Graphics;
 import java.util.Scanner;
 
 /**
- * Bresenham’s Line Drawing Algorithm
+ * Bresenham's Line Drawing Algorithm
  * @author Marwan
  */
 public class BLD extends Applet {
