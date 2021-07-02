@@ -3,6 +3,8 @@
 ## Introduction
 Bresenham’s line algorithm is an algorithm which determines which order to form a close approximation to a straight line between two given points. Write a C program for determining pixel activation list between two given points in order to draw line segment using Bresenham’s Line drawing algorithm.
 
+    h<sub>&theta;</sub>(x) = &theta;<sub>o</sub> x + &theta;<sub>1</sub>x
+
 1. Input the two line end-points, storing the left end-point in $(x_0, y_0)$
 2. Plot the point $(x_0, y_0)$
 3. Calculate the constants $$\delta x, ?y, 2?y,\text{ and }(2?y - 2?x)$$ and get the first value for the decision
