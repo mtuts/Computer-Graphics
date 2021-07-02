@@ -3,7 +3,7 @@
 ## Algorithm steps
 Given two points (start and end points) (x<sub>0</sub> , y<sub>0</sub> ) , (x<sub>1</sub>, y<sub>1</sub>)
 1. Calculate &#8710;*NE* = 2&#8710;y - 2&#8710;x, &#8710;*E* = 2&#8710;y, *d*<sub>0</sub> 2&#8710;y - &#8710;x
-1. first pixel (*round*(x<sub>0</sub>), *round*(y<sub>0))
+1. first pixel (*round*(x<sub>0</sub>), *round*(y<sub>0</sub>))
 1. *x*<sub>0</sub> &larr; (*round*(x<sub>0</sub>), *round*(y<sub>0</sub>))
 1. Sample *x* with step &#8710;*x* = 1 (i.e. *x* = {*x*<sub>0</sub>, *x*<sub>0</sub> + 1, *x*<sub>0</sub> + 2, ..., *x*<sub>1</sub>})
 1. Calculate each succeeding y value as:
