@@ -9,4 +9,4 @@ Enter X2 Y2
 140 88
 ```
 
-[Applet Bresenham's Line Drawing Algorithm](/screen-shots/lab05/bld.png)
+![Applet Bresenham's Line Drawing Algorithm](/screen-shots/lab05/bld.png)
