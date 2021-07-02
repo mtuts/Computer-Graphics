@@ -11,9 +11,8 @@ P<sub>0</sub> = 2&#8710;y - &#8710;x
 P<sub>k+1</sub> = P<sub>k</sub> + 2&#8710;y
 Otherwise, the next point to plot is (x<sub>k+1</sub>, y<sub>k+1</sub>) and:
 P<sub>k+1</sub> = P<sub>k</sub> + 2&#8710;y - 2&#8710;x
-5. Repeat step 4 (&#8710;x – 1) times
-
-NOTE: The algorithm and derivation above assumes slopes are less than 1. For other slopes we need to adjust the algorithm slightly
+5. Repeat step 4 (&#8710;x – 1) times 
+  NOTE: The algorithm and derivation above assumes slopes are less than 1. For other slopes we need to adjust the algorithm slightly
 
 ## Sample Run
 
