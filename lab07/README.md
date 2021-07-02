@@ -10,7 +10,7 @@ Circles have the property of being highly symmetrical, which is handy when it co
 Given the circle's raduis *R*
 1. Put x<sub>0</sub> = 0; y<sub>0</sub> = *round*(*R*)
 1. Calculate *h*<sub>0</sub> = 1 - y<sub>0</sub>
-1. first pixel (x<sub>0</sub>, y<sub>0)
+1. first pixel (x<sub>0</sub>, y<sub>0</sub>)
 1. Sample *x* with step &#8710;x = 1 (i.e. *x* = {*x*<sub>0</sub>, *x*<sub>0</sub> + 1, *x*<sub>0</sub> + 2, ..., *round*(*R* sin(45))})
 1. Calculate each succeeding y value as:
     1. *y*<sub>k + 1</sub> = *y*<sub>k</sub> if *h*<sub>k</sub> < 0 (*h*<sub>k + 1</sub> = *d*<sub>k</sub> + 2x<sub>k</sub> + 3)
