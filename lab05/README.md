@@ -22,7 +22,7 @@ Given two points (start and end points) (x<sub>0</sub> , y<sub>0</sub> ) , (x<su
 4. Sample *x* with step &#8710;*x* = 1 (i.e. *x* = {*x*<sub>0</sub>, *x*<sub>0</sub> + 1, *x*<sub>0</sub> + 2, ..., *x*<sub>1</sub>})
 5. Calculate each succeeding y value as
     a) *y*<sub>k + 1</sub> = *y*<sub>k</sub> if *p*<sub>k</sub> < 0 (*p*<sub>k + 1</sub> = *p*<sub>k</sub> + 2&#8710;y)
-    b)*y*<sub>k + 1</sub> = *y*<sub>k</sub> + 1 if *p*<sub>k</sub> > 0 (*p*<sub>k + 1</sub> = *p*<sub>k</sub> + 2&#8710;y -  2&#8710;x)
+    b) *y*<sub>k + 1</sub> = *y*<sub>k</sub> + 1 if *p*<sub>k</sub> > 0 (*p*<sub>k + 1</sub> = *p*<sub>k</sub> + 2&#8710;y -  2&#8710;x)
 
 ## Sample Run
 
