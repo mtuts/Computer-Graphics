@@ -1,6 +1,6 @@
-# Bresenham’s Line Drawing Algorithm
+# Bresenham's Line Drawing Algorithm
 
-Bresenham’s line algorithm is an algorithm which determines which order to form a close approximation to a straight line between two given points. Write a C program for determining pixel activation list between two given points in order to draw line segment using Bresenham’s Line drawing algorithm.
+Bresenham's line algorithm is an algorithm which determines which order to form a close approximation to a straight line between two given points. Write a C program for determining pixel activation list between two given points in order to draw line segment using Bresenham's Line drawing algorithm.
 
 1. Input the two line end-points, storing the left end-point in (x<sub>0</sub>, y<sub>0</sub>)
 2. Plot the point (x<sub>0</sub>, y<sub>0</sub>)
@@ -11,7 +11,7 @@ P<sub>0</sub> = 2&#8710;y - &#8710;x
 P<sub>k+1</sub> = P<sub>k</sub> + 2&#8710;y
 Otherwise, the next point to plot is (x<sub>k+1</sub>, y<sub>k+1</sub>) and:
 P<sub>k+1</sub> = P<sub>k</sub> + 2&#8710;y - 2&#8710;x
-5. Repeat step 4 (&#8710;x – 1) times..
+5. Repeat step 4 (&#8710;x - 1) times..
 NOTE: The algorithm and derivation above assumes slopes are less than 1. For other slopes we need to adjust the algorithm slightly
 
 ## Sample Run
