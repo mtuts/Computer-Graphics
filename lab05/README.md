@@ -20,7 +20,7 @@ Given two points (start and end points) (x<sub>0</sub> , y<sub>0</sub> ) , (x<su
 2. first pixel (*round*(x<sub>0</sub>), *round*(y<sub>0))
 3. *x*<sub>0</sub> &larr; *round*(x<sub>0</sub>), *round*(x<sub>1), *y*<sub>0</sub> &larr; *round*(y<sub>0)
 4. Sample *x* with step &#8710;*x* = 1 (i.e. *x* = {*x*<sub>0</sub>, *x*<sub>0</sub> + 1, *x*<sub>0</sub> + 2, ..., *x*<sub>1</sub>})
-5. Calculate each succeeding y value as
+5. Calculate each succeeding y value as:
   a. abc
   a. aaa
 
