@@ -17,7 +17,7 @@ to tell OpenGL to use the texture for objects that it will draw. Before the text
 texture.enable(gl);
 ```
 
-## Applying texture on 2d object
+## Applying texture on 2D object
 
 We need to import following libraries:
 
@@ -28,10 +28,9 @@ import java.io.File;
 import java.io.IOException;
 ```
 
-then adding texture in `init()` method:
+In `init()` method after defining gl object line add texture initialization:
 
 ```java
-// after defining gl object
 Texture tex;
 // activate texture mapping for 2D
 gl.glEnable(GL.GL_TEXTURE_2D);
@@ -44,73 +43,40 @@ try {
 }
 ```
 
-Then in `display()` method we add our primitive shape for example Quad:
+In `display()` method we add our primitive shape for example Quad and apply texture on it:
 
+```java
+gl.glBegin(GL.GL_QUADS);
+
+gl.glTexCoord2d(1.0, 1.0);
+gl.glVertex2d(0.0, 0.0);
+
+gl.glTexCoord2d(0.0, 1.0);
+gl.glVertex2d(1.0, 0.0);
+
+gl.glTexCoord2d(0.0, 0.0);
+gl.glVertex2d(1.0, 1.0);
+
+gl.glTexCoord2d(1.0, 0.0);
+gl.glVertex2d(0.0, 1.0);
+
+gl.glEnd();
+```
+
+As you can see texture coordinate (1.0, 0.0) maps to vertex 1, texture coordinate (0.0, 0.0) maps to vertex 2, and so on.
 
 
 ### Sample Run
+![Applying texture on quad](/screen-shots/lab09/2d.png)
 
-<table><tr><td>
-<img src="/screen-shots/lab08/translate-b.png" alt="Before translation" width="auto">
-</td><td>
-<img src="/screen-shots/lab08/translate-a.png" alt="After translation" width="100%">
-</td></tr>
-<tr>
-<th>Before translation</th>
-<th>After translation</th>
-</tr>
-</table>
+## Applying texture on 3D object
 
-## Rotation
-
-Rotation of objects can be done along any of the 3 axes, using `glRotatef(angle, x, y, z)`. You need to pass angle of rotation and x, y, z axes as parameters to this method.
+Same as we did in 2D for initalizing texture with no change in `init()` method. However in `display()` method we add pre-defined object (`Teapot`):
 
 ```java
-glRotatef(float, angle, float x, float y float z)
-```
-
-### Example
-```java
-gl.glRotatef(angle, 0.0f, 1.0f, 0.0f);
+GLUT glut = new GLUT();
+glut.glutSolidTeapot(1.0f);
 ```
 
 ### Sample Run
-
-<table><tr><td>
-<img src="/screen-shots/lab08/rotate-b.png" alt="Before rotation" width="auto">
-</td><td>
-<img src="/screen-shots/lab08/rotate-a.png" alt="After rotation" width="100%">
-</td></tr>
-<tr>
-<th>Before rotation</th>
-<th>After rotation</th>
-</tr>
-</table>
-
-
-
-## Scaling
-
-Scaling an object is done by using `glScalef(x, y, z)`. This method accepts three floating point parameters, using which we specify the scale factors along the x, y, and z axes respectively.
-
-```java
-glScalef(float x, float y float z)
-```
-
-### Example
-```java
-gl.glScalef(0.5f, 0.5f, 0.5f);
-```
-
-### Sample Run
-
-<table><tr><td>
-<img src="/screen-shots/lab08/scale-b.png" alt="Before scaling" width="auto">
-</td><td>
-<img src="/screen-shots/lab08/scale-a.png" alt="After scaling" width="100%">
-</td></tr>
-<tr>
-<th>Before scaling</th>
-<th>After scaling</th>
-</tr>
-</table>
+![Applying texture on quad](/screen-shots/lab09/3d.png)
