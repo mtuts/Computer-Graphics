@@ -33,4 +33,9 @@ gl.glTranslatef(1.5f, 1.5f, -6.0f);
 
 ### Sample Run
 
-![Before translation](/screen-shots/lab08/translate-b.png) | ![After translation](/screen-shots/lab08/translate-a.png)
+<table><tr><td>
+![Before translation](/screen-shots/lab08/translate-b.png)
+</td><td>
+![After translation](/screen-shots/lab08/translate-a.png)
+</td></tr>
+</table>
