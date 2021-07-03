@@ -40,9 +40,9 @@ gl.glTranslatef(1.5f, 1.5f, -6.0f);
 </td></tr>
 <tr>
 <th>Before translation<br>
-```java
+<pre>
 gl.glTranslatef(0.0f, 0.0f, -6.5f);
-```
+</pre>
 </th>
 <th>After translation</th>
 </tr>
