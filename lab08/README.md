@@ -1,6 +1,6 @@
 # 3D Transormation
 
-Appling different type of transformations such rtation, translation, and scaling.
+Applying different type of transformations such rtation, translation, and scaling.
 
 ## Translation
 
