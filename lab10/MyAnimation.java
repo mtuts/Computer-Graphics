@@ -12,7 +12,7 @@ import javax.media.opengl.GLEventListener;
 import javax.media.opengl.glu.GLU;
 
 /**
- * 3D Transformation
+ * 3D Animation
  * @author Marwan
  */
 public class MyAnimation implements GLEventListener {
