@@ -1,4 +1,4 @@
-package cpit391;
+package lab13;
 
 import com.sun.opengl.util.Animator;
 import com.sun.opengl.util.GLUT;
@@ -12,20 +12,17 @@ import javax.media.opengl.GLEventListener;
 import javax.media.opengl.glu.GLU;
 
 
-
 /**
- * Week6.java <BR>
- * author: Brian Paul (converted to Java by Ron Cemer and Sven Goethel) <P>
- *
- * This version is equal to Brian Paul's version 1.2 1999/10/21
+ * Light Model
+ * @author Marwan
  */
-public class LightEffect implements GLEventListener {
+public class LightModel implements GLEventListener {
 
     public static void main(String[] args) {
-        Frame frame = new Frame("Light Effect");
+        Frame frame = new Frame("Light Model");
         GLCanvas canvas = new GLCanvas();
 
-        canvas.addGLEventListener(new LightEffect());
+        canvas.addGLEventListener(new LightModel());
         frame.add(canvas);
         frame.setSize(640, 480);
         final Animator animator = new Animator(canvas);
@@ -64,7 +61,6 @@ public class LightEffect implements GLEventListener {
         // Setup the drawing area and shading mode
         gl.glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
         gl.glShadeModel(GL.GL_SMOOTH); // try setting this to GL_FLAT and see what happens.
-        
         
         // light settings
         gl.glEnable(GL.GL_DEPTH_TEST);
@@ -105,7 +101,6 @@ public class LightEffect implements GLEventListener {
         // Move the "drawing cursor" around
         gl.glTranslatef(0.0f, 0.0f, -6.0f);
 
-        
         GLUT glut = new GLUT();
         glut.glutSolidTeapot(1);
 
@@ -116,4 +111,5 @@ public class LightEffect implements GLEventListener {
     public void displayChanged(GLAutoDrawable drawable, boolean modeChanged, boolean deviceChanged) {
     }
 }
+
 

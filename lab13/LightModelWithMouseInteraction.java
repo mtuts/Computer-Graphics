@@ -1,4 +1,4 @@
-package cpit391;
+package lab13;
 
 import com.sun.opengl.util.Animator;
 import com.sun.opengl.util.GLUT;
@@ -15,15 +15,12 @@ import javax.media.opengl.GLEventListener;
 import javax.media.opengl.glu.GLU;
 
 
-
 /**
- * Week6.java <BR>
- * author: Brian Paul (converted to Java by Ron Cemer and Sven Goethel) <P>
- *
- * This version is equal to Brian Paul's version 1.2 1999/10/21
+ * Light Model
+ * @author Marwan
  */
-public class Mouse3D extends Frame implements GLEventListener, MouseListener, MouseMotionListener {
-    
+public class LightModelWithMouseInteraction extends Frame implements GLEventListener, MouseListener, MouseMotionListener {
+
     private int width;
     private int height;
     private final GLCanvas canvas;
@@ -34,7 +31,7 @@ public class Mouse3D extends Frame implements GLEventListener, MouseListener, Mo
     private int mouseMotionStartX;
     private int mouseMotionStartY;
     
-    public Mouse3D(int width, int height) {
+    public LightModelWithMouseInteraction(int width, int height) {
         this.width = width;
         this.height = height;
         
@@ -54,7 +51,7 @@ public class Mouse3D extends Frame implements GLEventListener, MouseListener, Mo
     }
 
     public static void main(String[] args) {
-        new Mouse3D(640, 640);
+        new LightModelWithMouseInteraction(640, 640);
     }
 
     public void init(GLAutoDrawable drawable) {
@@ -78,30 +75,24 @@ public class Mouse3D extends Frame implements GLEventListener, MouseListener, Mo
         gl.glEnable(GL.GL_DEPTH_TEST);
         gl.glDepthFunc(GL.GL_LESS);
         
-        float ambient[] = {0.5f, 0.7f, 0.3f, 1.0f};
-        gl.glLightfv(GL.GL_LIGHT0, GL.GL_AMBIENT, ambient, 0);
+        float amient[] = {1.0f, 0.0f, 0.0f, 1.0f};
+        gl.glLightfv(GL.GL_LIGHT0, GL.GL_AMBIENT, amient, 0);
         
         gl.glEnable(GL.GL_LIGHTING);
         gl.glEnable(GL.GL_LIGHT0);
-        
-        float diffuse[] = {0.5f, 0.7f, 0.3f, 1.0f};
-        gl.glLightfv(GL.GL_LIGHT1, GL.GL_DIFFUSE, diffuse, 0);
-        
-//        gl.glEnable(GL.GL_LIGHTING);
-        gl.glEnable(GL.GL_LIGHT1);
     }
 
     public void reshape(GLAutoDrawable drawable, int x, int y, int width, int height) {
         GL gl = drawable.getGL();
         GLU glu = new GLU();
+
+        if (height <= 0) { // avoid a divide by zero error!
+            height = 1;
+        }
         
         this.width = width;
         this.height = height;
-
-        if (height <= 0) { // avoid a divide by zero error!
         
-            height = 1;
-        }
         final float h = (float) width / (float) height;
         gl.glViewport(0, 0, width, height);
         gl.glMatrixMode(GL.GL_PROJECTION);
@@ -115,19 +106,16 @@ public class Mouse3D extends Frame implements GLEventListener, MouseListener, Mo
 
         // Clear the drawing area
         gl.glClear(GL.GL_COLOR_BUFFER_BIT | GL.GL_DEPTH_BUFFER_BIT);
-        // Reset the current matrix to the "identity"
         gl.glMatrixMode(GL.GL_MODELVIEW);
+        // Reset the current matrix to the "identity"
         gl.glLoadIdentity();
-
-        // Move the "drawing cursor" around
-//        gl.glTranslatef(0.0f, 0.0f, -6.0f);
 
         gl.glRotated(rotationY, 0, 1, 0);
         gl.glRotated(rotationX, 1, 0, 0);
 
         
         GLUT glut = new GLUT();
-        glut.glutSolidTeapot(0.3f);
+        glut.glutSolidTeapot(0.4);
 
         // Flush all drawing operations to the graphics card
         gl.glFlush();
@@ -137,45 +125,44 @@ public class Mouse3D extends Frame implements GLEventListener, MouseListener, Mo
     }
 
     @Override
-    public void mouseClicked(MouseEvent me) {
+    public void mouseClicked(MouseEvent e) {
     }
 
     @Override
-    public void mousePressed(MouseEvent me) {
-        mouseMotionStartX = me.getX();
-        mouseMotionStartY = me.getY();
+    public void mousePressed(MouseEvent e) {
+        mouseMotionStartX = e.getX();
+        mouseMotionStartY = e.getY();
     }
 
     @Override
-    public void mouseReleased(MouseEvent me) {
+    public void mouseReleased(MouseEvent e) {
     }
 
     @Override
-    public void mouseEntered(MouseEvent me) {
+    public void mouseEntered(MouseEvent e) {
     }
 
     @Override
-    public void mouseExited(MouseEvent me) {
+    public void mouseExited(MouseEvent e) {
     }
 
     @Override
-    public void mouseDragged(MouseEvent me) {
-        int x = me.getX();
-        int y = me.getY();
+    public void mouseDragged(MouseEvent e) {
+        int x = e.getX();
+        int y = e.getY();
         
         rotationX += (y - mouseMotionStartY) * 180.0 / height;
         rotationY += (x - mouseMotionStartX) * 180.0 / width;
         
-        mouseMotionStartX = me.getX();
-        mouseMotionStartY = me.getY();
+        mouseMotionStartX = e.getX();
+        mouseMotionStartY = e.getY();
         
         canvas.display();
-        
-        
     }
 
     @Override
-    public void mouseMoved(MouseEvent me) {
+    public void mouseMoved(MouseEvent e) {
     }
 }
+
 
