@@ -71,7 +71,16 @@ As you can see texture coordinate (1.0, 0.0) maps to vertex 1, texture coordinat
 
 ## Applying texture on 3D object
 
-Same as we did in 2D for initalizing texture with no change in `init()` method. However in `display()` method we add pre-defined object (`Teapot`):
+We need same libraries that we imported before and `GLUT` library:
+
+```java
+import com.sun.opengl.util.GLUT;
+import com.sun.opengl.util.texture.TextureIO;
+import java.io.File;
+import java.io.IOException;
+```
+
+In `init()` method, it will be same as in 2D . In `display()` method, add pre-defined object (`Teapot`):
 
 ```java
 GLUT glut = new GLUT();
