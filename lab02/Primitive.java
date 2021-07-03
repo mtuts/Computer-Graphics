@@ -1,7 +1,5 @@
 package lab02;
 
-
-
 import com.sun.opengl.util.Animator;
 import java.awt.Frame;
 import java.awt.event.WindowAdapter;
@@ -12,18 +10,14 @@ import javax.media.opengl.GLCanvas;
 import javax.media.opengl.GLEventListener;
 import javax.media.opengl.glu.GLU;
 
-
-
 /**
- * AllLabs.java <BR>
- * author: Brian Paul (converted to Java by Ron Cemer and Sven Goethel) <P>
- *
- * This version is equal to Brian Paul's version 1.2 1999/10/21
+ * Draw Primitive Geometries
+ * @author Marwan
  */
 public class Primitive implements GLEventListener {
 
     public static void main(String[] args) {
-        Frame frame = new Frame("Lab 02 Primitive");
+        Frame frame = new Frame("Lab 02 Primitive Geometries");
         GLCanvas canvas = new GLCanvas();
 
         canvas.addGLEventListener(new Primitive());

@@ -18,9 +18,9 @@ gl.glTranslatef(1.5f, 1.5f, -6.0f);
 ### Sample Run
 
 <table><tr><td>
-<img src="/screen-shots/lab08/translate-b.png" alt="Before translation" width="auto">
+<img src="/images/lab08/translate-b.png" alt="Before translation" width="auto">
 </td><td>
-<img src="/screen-shots/lab08/translate-a.png" alt="After translation" width="100%">
+<img src="/images/lab08/translate-a.png" alt="After translation" width="100%">
 </td></tr>
 <tr>
 <th>Before translation</th>
@@ -44,9 +44,9 @@ gl.glRotatef(angle, 0.0f, 1.0f, 0.0f);
 ### Sample Run
 
 <table><tr><td>
-<img src="/screen-shots/lab08/rotate-b.png" alt="Before rotation" width="auto">
+<img src="/images/lab08/rotate-b.png" alt="Before rotation" width="auto">
 </td><td>
-<img src="/screen-shots/lab08/rotate-a.png" alt="After rotation" width="100%">
+<img src="/images/lab08/rotate-a.png" alt="After rotation" width="100%">
 </td></tr>
 <tr>
 <th>Before rotation</th>
@@ -72,9 +72,9 @@ gl.glScalef(0.5f, 0.5f, 0.5f);
 ### Sample Run
 
 <table><tr><td>
-<img src="/screen-shots/lab08/scale-b.png" alt="Before scaling" width="auto">
+<img src="/images/lab08/scale-b.png" alt="Before scaling" width="auto">
 </td><td>
-<img src="/screen-shots/lab08/scale-a.png" alt="After scaling" width="100%">
+<img src="/images/lab08/scale-a.png" alt="After scaling" width="100%">
 </td></tr>
 <tr>
 <th>Before scaling</th>

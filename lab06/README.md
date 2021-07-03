@@ -19,4 +19,4 @@ Enter X2 Y2
 178 279
 ```
 
-![Applet Midpoint Line Algorithm](/screen-shots/lab06/mla.png)
+![Applet Midpoint Line Algorithm](/images/lab06/mla.png)

@@ -67,7 +67,7 @@ As you can see texture coordinate (1.0, 0.0) maps to vertex 1, texture coordinat
 
 
 ### Sample Run
-![Applying texture on quad](/screen-shots/lab09/2d.png)
+![Applying texture on quad](/images/lab09/2d.png)
 
 ## Applying texture on 3D object
 
@@ -88,4 +88,4 @@ glut.glutSolidTeapot(1.0f);
 ```
 
 ### Sample Run
-![Applying texture on quad](/screen-shots/lab09/3d.png)
+![Applying texture on quad](/images/lab09/3d.png)

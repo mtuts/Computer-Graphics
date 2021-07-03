@@ -25,4 +25,4 @@ Enter Radius
 70
 ```
 
-![Applet Midpoint Circle Algorithm](/screen-shots/lab07/mca.png)
+![Applet Midpoint Circle Algorithm](/images/lab07/mca.png)

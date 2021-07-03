@@ -13,18 +13,14 @@ import javax.media.opengl.GLCanvas;
 import javax.media.opengl.GLEventListener;
 import javax.media.opengl.glu.GLU;
 
-
-
 /**
- * AllLabs.java <BR>
- * author: Brian Paul (converted to Java by Ron Cemer and Sven Goethel) <P>
- *
- * This version is equal to Brian Paul's version 1.2 1999/10/21
+ * 3D Models
+ * @author Marwan
  */
 public class Apply3DModels implements GLEventListener {
 
     public static void main(String[] args) {
-        Frame frame = new Frame("Lab 02 Primitive");
+        Frame frame = new Frame("Lab 03 3D Models");
         GLCanvas canvas = new GLCanvas();
 
         canvas.addGLEventListener(new Apply3DModels());
@@ -98,6 +94,9 @@ public class Apply3DModels implements GLEventListener {
         gl.glRotated(45, 0, 1, 1);
         
         GLUT glut = new GLUT();
+        
+        gl.glColor3f(1.0f, 1.0f, 1.0f);
+        
         // Wire Cube
         glut.glutWireCube(1);
         
@@ -117,10 +116,15 @@ public class Apply3DModels implements GLEventListener {
         // Solid TeaPot
         glut.glutSolidTeapot(1);
         
-        gl.glTranslatef(4.0f, 1.0f, 0.0f);
+        gl.glTranslatef(3.0f, 1.0f, 0.0f);
 
         // Wire Sphere
         glut.glutWireSphere (1.0, 16, 16);
+        
+        gl.glTranslatef(2.0f, 0.0f, 0.0f);
+        
+        gl.glColor3f(1.0f, 1.0f, 0.0f);
+        glut.glutWireCylinder(0.5f, 2.0, 10, 3);
         
         // Flush all drawing operations to the graphics card
         gl.glFlush();
