@@ -28,7 +28,7 @@ import java.io.File;
 import java.io.IOException;
 ```
 
-In `init()` method after defining gl object line add texture initialization:
+In `init()` method after defining `gl` object line add texture initialization:
 
 ```java
 Texture tex;
