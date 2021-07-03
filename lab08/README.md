@@ -39,7 +39,11 @@ gl.glTranslatef(1.5f, 1.5f, -6.0f);
 <img src="/screen-shots/lab08/translate-a.png" alt="After translation" width="100%">
 </td></tr>
 <tr>
-<th>Before translation</th>
+<th>Before translation<br>
+```java
+gl.glTranslatef(0.0f, 0.0f, -6.5f);
+```
+</th>
 <th>After translation</th>
 </tr>
 </table>
