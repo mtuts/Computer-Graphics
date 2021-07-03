@@ -33,4 +33,4 @@ gl.glTranslatef(1.5f, 1.5f, -6.0f);
 
 ### Sample Run
 
-<figure class="image"><img src="/screen-shots/lab08/translate-b.png" alt="Before translation" width="40%" ><figcaption>Before translation</figcaption></figure> | <figure class="image"><img src="/screen-shots/lab08/translate-a.png" alt="After translation" width="40%" > <figcaption>After translation</figcaption></figure>
+![Before translation](/screen-shots/lab08/translate-b.png) | ![After translation](/screen-shots/lab08/translate-a.png)
