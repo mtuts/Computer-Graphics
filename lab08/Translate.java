@@ -92,7 +92,7 @@ public class Translate implements GLEventListener {
         gl.glTranslatef(1.5f, 1.5f, 0.0f);  // Translate both x and y by 1.5
         
         GLUT glut = new GLUT();
-        glut.glutSolidTeapot(1.0);
+        glut.glutWireTeapot(1.0);
 
         // Flush all drawing operations to the graphics card
         gl.glFlush();
